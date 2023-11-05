@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .grid{
+			background-image: url('group.png');
+			height: 90vh;
+			width: 450vw;
+			background-repeat: repeat;
+			background-size: 60px;
+            z-index: -1;
+            position: absolute;
+            top: 65px;
+            left: 100px;
+		}
+        .bg{
+            height: 100vh;
+			width: 458vw;
+            background-image: radial-gradient(#9198e5, #ffffff);
+            z-index: -2;
+            position: absolute;
+            top: 0px;
+        }
+        .top{
+            width: 450vw;
+            height: 3vh;
+            background-color: #6B7AB6;
+            position: absolute;
+            top: 60px;
+            left: 100px;
+            z-index:-1 ;
+        }
+        .bottom{
+            width: 450vw;
+            height: 1.5vh;
+            background-color: #6B7AB6;
+            position: absolute;
+            bottom: 15px;
+            left: 100px;
+            z-index: -1;
+        }
+        .refresh{
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            height: 23px;
+            border-radius: 20px;
+            border-width: 1px;
+            width: 200px;
+            position:fixed;
+            top: 20px;
+            left: 200px;
+            background-color: transparent;
+            z-index: 3;
+        }
+        .scroll{
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            height: 23px;
+            width: 200px;
+            position:fixed;
+            top: 20px;
+            left: 750px;
+            background-color: transparent;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid"></div>
+    <div class="bg"></div>
+    <div class="top"></div>
+    <div class="bottom"></div>
+    <div class="title">
+        <div class="title-1">PROVIDENCE</div>
+        <div class="title-2">STATION</div>
+    </div>
+
+    <button type="button" class="refresh"  onClick="window.location.reload();">---Click to refresh---</button>
+    <div class="scroll">Scroll this way -- > </div>
+    <div class="txt">
+        <div class="txt-1">MAIN LOBBY</div>
+        <div class="txt-2">CAFE</div>
+        <div class="txt-3">BAGGAGE</div>
+        <div class="txt-4">TRACK</div>
+        <div class="txt-5">SILENCE</div>
+    </div>
+        <div class="t-1">DIALOGUE</div>
+        <div class="t-9">_</div>
+    </div>
+    <div class="listing-item tns-item">
+        <div class="pink">
+            <div class="p-1">
+                <p class="p-1-1" >I've already calculated its average delay time.</p>
+                <p class="p-1-2">I'm thinking of starting a betting pool for fellow passengers.</p>
+                <p class="p-1-3">I've got five bucks on 15 minutes late.</p>
+                <p class="p-1-4">How about you?</p>
+                <p class="p-1-5">I'll go bold and say 25.</p>
+                <p class="p-1-6">But if it's early, I'll buy you a coffee.</p>
+                <p class="p-1-7">Deal!</p>
+            </div>
+            <div class="p-2">
+                <p class="p-2-1">Today's a 'double-shot-of-espresso' kind of day, isn't it?</p>
+                <p class="p-2-2">More like a 'dunk-my-head-in-the-coffee-pot' kind of day.</p>
+            </div>
+            <div class="p-3">
+                <p class="p-3-1">Not yet, but I'll make it a priority this morning.</p>
+                <p class="p-3-2">I'll send you my feedback by tomorrow. </p>
+            </div>
+            <div class="p-4">
+                <p class="p-4-1">Any ideas for dinner tonight?</p>
+                <p class="p-4-2"> I'm in the mood for something delicious and comforting.</p>
+                <p class="p-4-3">I'm thinking of making that pasta dish with the garlic butter sauce.</p>
+                <p class="p-4-4">How does that sound?</p>
+                <p class="p-4-5">Perfect!</p>
+                <p class="p-4-6">Maybe a bowl of ice cream for dessert?</p>
+                <p class="p-4-7">You're reading my mind.</p>
+            </div>
+            <p class="p-5">I'll be your personal alarm clock.</p>
+            <div class="p-6">
+                <p class="p-6-1">By the way, how's Max doing?</p>
+                <p class="p-6-2">Max is growing like a weed</p>
+            </div>
+            <div class="p-7">
+                <p class="p-7-1">You won't believe what happened at the Williams' house last weekend.</p>
+                <p class="p-7-2">Did they throw another wild party?</p>
+                <p class="p-7-3">Oh, it was wild, all right.</p>
+                <p class="p-7-4">They even hired a DJ.</p>
+                <p class="p-7-5">The party ruffled a few feathers, to say the least.</p>
+                <p class="p-7-6">t's always interesting to see how a good party can stir up the neighborhood.</p>
+            </div>
+            <div class="p-8">
+                <p class="p-8-1">Is she the one?</p>
+                <p class="p-8-2">We'll see, but I've never seen Mark so happy.</p>
+            </div>
+            <div class="p-9">
+                <p class="p-9-1">It was a hilarious sight.</p>
+                <p class="p-9-2">Haha, that's classic.</p>
+                <p class="p-9-3">I'm sure Jessica had a good laugh when she walked in.</p>
+                <p class="p-9-4">She did, and she's already planning her retaliation. </p>
+            </div>
+            <div class="p-10">
+                <p class="p-10-1">Have you noticed how often Sarah and Daniel have been hanging out lately?</p>
+                <p class="p-10-2">Yeah, they do seem pretty close these days.</p>
+                <p class="p-10-3">What's your theory?</p>
+                <p class="p-10-4">I'm thinking there might be some sparks flying between them.</p>
+                <p class="p-10-5">They've been spending evenings together.</p>
+                <p class="p-10-6">It does sound cozy.</p>
+            </div>
+            <div class="p-11">
+                <p class="p-11-1">The whole neighborhood is abuzz with speculation.</p>
+                <p class="p-11-2">Are they selling, or is it just a major upgrade?</p>
+                <p class="p-11-3">No one knows for sure.</p>
+                <p class="p-11-4">But it's got us all curious.</p>
+            </div>
+            <div class="p-12">
+                <p class="p-12-1">Thesis writing is taking over my life, guys.</p>
+                <p class="p-12-2"> need all the support I can get.</p>
+                <p class="p-12-3">I feel your pain.</p>
+            </div>
+            <div class="p-13">
+                <p class="p-13-1">It's both exciting and nerve-wracking.</p>
+                <p class="p-13-2"> I'm researching grad programs.</p>
+                <p class="p-13-3">I'm considering taking a gap year to travel and gain life experiences before diving into my career.</p>
+                <p class="p-13-4">Agreed.</p>
+                <p class="p-13-5">We're going to make it our own.</p>
+            </div>
+            <div class="p-14">
+                <p class="p-14-1">We once had a mysterious 'case of the missing leftovers.' </p>
+                <p class="p-14-2">No one admitted to eating the leftover pizza, but it mysteriously vanished.</p>
+                <p class="p-14-3">It's an ongoing battle for control of the thermostat.</p>
+            </div>
+            <div class="p-15">
+                <p class="p-15-1">Hey, babe, I've been thinking about our future a lot lately.</p>
+                <p class="p-15-2">Have you considered where you'd like to settle down after graduation?</p>
+                <p class="p-15-3">It's been on my mind too.</p>
+                <p class="p-15-4">I've always been drawn to the idea of living near the coast, maybe somewhere with a beach town vibe.</p>
+            </div>
+            <div class="p-16">
+                <p class="p-16-1">It's so hard to get out of this warm bed.</p>
+                <p class="p-16-2">I know what you mean.</p>
+                <p class="p-16-3">Cozy blankets are tempting.</p>
+            </div>
+            <div class="p-17">
+                <p class="p-17-1">I heard the train's running a bit late today.</p>
+                <p class="p-17-2">It's always a good idea to check the schedule.</p>
+                <p class="p-17-3">Thanks for the tip</p>
+                <p class="p-17-4">I'm new to the city, so I'm still getting used to the train system. </p>
+                <p class="p-17-5">Where are you headed?</p>
+                <p class="p-17-6">I'm heading to Boston for a meeting. </p>
+                <p class="p-17-7">What about you?</p>
+                <p class="p-17-8">I'm just taking a day trip to Newport.</p>
+                <p class="p-17-9">I've heard it's beautiful, and I want to explore the city.</p>
+                <p class="p-17-10">Oh, Newport is gorgeous.</p>
+                <p class="p-17-11">You'll have a great time. </p>
+            </div>
+            <div class="p-18">
+                <p class="p-18-1">It's a lifesaver during long waits.</p>
+                <p class="p-18-2">I couldn't agree more.</p>
+                <p class="p-18-3">The coffee's excellent, and the pastries are to die for.</p>
+                <p class="p-18-4">What brings you to Providence today?</p>
+                <p class="p-18-5">I'm visiting some friends and catching up.</p>
+                <p class="p-18-6">It's been a while since we hung out.</p>
+            </div>
+            <div class="p-19">
+                <p class="p-19-1">Excuse me, do you know if this is the platform for the 10:15 train to New York?</p>
+                <p class="p-19-2">I'm pretty sure it is, but you might want to double-check the signs just to be sure.</p>
+                <p class="p-19-3">Are you headed to the city?</p>
+                <p class="p-19-4">Yes, I have a job interview there.</p>
+                <p class="p-19-5">I'm a little nervous.</p>
+            </div>
+        </div>
+        <div class="orange">
+            <div class="o-1">
+                <p class="o-1-1">You ever notice how train stations are like a never-ending fashion show?</p>
+                <p class="o-1-2">It's like everyone's trying to outdo each other.</p>
+                <p class="o-1-3">Oh, absolutely.</p>
+                <p class="o-1-4">I always feel underdressed compared to the guy in the top hat and the woman with the feather boa.</p>
+                <p class="o-1-5">Well, next time, we should bring our own fashion accessories.</p>
+                <p class="o-1-6">I'm thinking monocles and snorkels.</p>
+            </div>
+            <div class="o-2">
+                <p class="o-2-1"> I've always wanted to see the city that never sleeps.</p>
+                <p class="o-2-2">Same.</p>
+                <p class="o-2-3"> I'm so excited about exploring Central Park, Times Square, and maybe even catching a Broadway show.</p>
+                <p class="o-2-4">And don't forget about the food!</p>
+                <p class="o-2-5">I've heard that the pizza and bagels are to die for.</p>
+                <p class="o-2-6">Plus, we must visit the Empire State Building for those breathtaking views.</p>
+                <p class="o-2-7">Absolutely!</p>
+                <p class="o-2-8">I've already made a list of all the iconic places we need to visit.</p>
+                <p class="o-2-9">I can't wait to walk across the Brooklyn Bridge and take a ferry to the Statue of Liberty.</p>
+            </div>
+            <div class="o-3">
+                <p class="o-3-1">Maybe a Netflix binge and some pizza.</p>
+                <p class="o-3-2">You?</p>
+                <p class="o-3-3">Same here, probably a lazy weekend.</p>
+            </div>
+            <div class="o-4">
+                <p class="o-4-1">You know how life is.</p>
+                <p class="o-4-2">Busy as ever.</p>
+                <p class="o-4-3">We should catch up over a drink soon.</p>
+                <p class="o-4-4">Definitely.</p>
+            </div>
+            <div class="o-5">
+                <p class="o-5-1">I've started taking guitar lessons.</p>
+                <p class="o-5-2">It's challenging but fun.</p>
+                <p class="o-5-3">That's cool.</p>
+                <p class="o-5-4">I've been trying to learn to cook, emphasis on 'trying.'</p>
+                <p class="o-5-5">Any masterpieces yet?</p>
+                <p class="o-5-6">Haha, well, let's just say no one's gone to the hospital.</p>
+                <p class="o-5-7">Progress, right?</p>
+            </div>
+            <div class="o-6">
+                <p class="o-6-1">It's a 'grab-coffee-first' kind of morning.</p>
+                <p class="o-6-2">You know the drill.</p>
+                <p class="o-6-3">Yeah.</p>
+                <p class="o-6-4">And don't forget the world's tiniest steps to the office kitchen.</p>
+                <p class="o-6-5">The daily adventure of our caffeine quest!</p>
+            </div>
+            <div class="o-7">
+                <p class="o-7-1">I've actually started setting my coffee maker to brew automatically so that the aroma wakes me up. </p>
+                <p class="o-7-2">It's like my personal alarm clock.</p>
+                <p class="o-7-3">That's genius!</p>
+                <p class="o-7-4">I need to try that.</p>
+            </div>
+            <div class="o-8">
+                <p class="o-8-1">Have you tried any shortcuts?</p>
+                <p class="o-8-2">I've experimented with a few, but they usually end up being 'longcuts' or just taking me to even worse traffic jams.</p>
+                <p class="o-8-3">Haha, I feel your pain.</p>
+                <p class="o-8-4">Maybe we should consider a helicopter commute.</p>
+                <p class="o-8-5">Just kidding, but seriously, we need a better way.</p>
+            </div>
+            <div class="o-9">
+                <p class="o-9-1">I've got a homemade sandwich, but I can't resist the thought of ordering some delicious takeout.</p>
+                <p class="o-9-2">It's a tough call. </p>
+                <p class="o-9-3">Sandwiches are practical, but takeout is a tasty treat.</p>
+                <p class="o-9-4">You're right.</p>
+            </div>
+            <div class="o-10">
+                <p class="o-10-1">Between emails at all hours and the pressure to always be 'on,' it's tough to find that work-life balance.</p>
+                <p class="o-10-2">I've started setting clear boundaries.</p>
+                <p class="o-10-3"> No work emails after 7 PM and a strict 'unplugged' time on weekends.</p>
+                <p class="o-10-4">It's been a game-changer for my sanity.</p>
+                <p class="o-10-5">It's vital for our mental well-being.</p>
+                <p class="o-10-6">Absolutely.</p>
+            </div>
+            <div class="o-11">
+                <p class="o-11-1">Any dinner plans?</p>
+                <p class="o-11-2">I was thinking about trying out that new Thai restaurant in town.</p>
+                <p class="o-11-3">I've heard their Pad Thai is to die for.</p>
+                <p class="o-11-4"> You read my mind.</p>
+                <p class="o-11-5">Let's give it a shot!</p>
+            </div>
+            <div class="o-12">
+                <p class="o-12-1">The line at this coffee shop is always crazy in the morning.</p>
+                <p class="o-12-2">Good thing their coffee's worth the wait.</p>
+                <p class="o-12-3">You're right.</p>
+                <p class="o-12-4">What's your go-to coffee order?</p>
+                <p class="o-12-5">I'm a latte person myself. </p>
+                <p class="o-12-6">It's like a warm hug in a cup.</p>
+                <p class="o-12-7">How about you?</p>
+                <p class="o-12-8">I usually go for a cappuccino, but I might switch it up today.</p>
+                <p class="o-12-9">A cappuccino's always a classic choice.</p>
+            </div>
+            <div class="o-13">
+                <p class="o-13-1"> I can't believe it's only Wednesday.</p>
+                <p class="o-13-2">Feels like this week is dragging.</p>
+                <p class="o-13-3">Tell me about it.</p>
+                <p class="o-13-4">Want me to grab you something?</p>
+                <p class="o-13-5">You're a lifesaver.</p>
+            </div>
+            <div class="o-14">
+                <p class="o-14-1">These virtual meetings are starting to wear me out.</p>
+                <p class="o-14-2">It's like a never-ending Zoom marathon.</p>
+                <p class="o-14-3">I hear you.</p>
+                <p class="o-14-4">It's not the same as in-person meetings.</p>
+                <p class="o-14-5"> I even had my cat photobomb my last meeting.</p>
+                <p class="o-14-6">Haha, that's the best part of virtual meetings – the unexpected moments.</p>
+                <p class="o-14-7">It's good to find humor in them.</p>
+                <p class="o-14-8">You're right</p>
+                <p class="o-14-9">It keeps things interesting.</p>
+            </div>
+            <div class="o-15">
+                <p class="o-15-1">How about you?</p>
+                <p class="o-15-2">I'm trying to make it a habit. </p>
+                <p class="o-15-3">I've been slacking off on my fitness, and I figured it's time for a change.</p>
+                <p class="o-15-4">That's the spirit.</p>
+                <p class="o-15-5">Stick with it, and you'll see results in no time.</p>
+            </div>
+            <div class="o-16">
+                <p class="o-16-1">Hey, I was thinking, we should organize another virtual game night this weekend.</p>
+                <p class="o-16-2"> It was so much fun last time.</p>
+                <p class="o-16-3">I'm all in.</p>
+                <p class="o-16-4">What game should we play this time?</p>
+                <p class="o-16-5">How about a trivia night?</p>
+                <p class="o-16-6"> It's always a blast.</p>
+                <p class="o-16-7">Sounds like a plan.</p>
+            </div>
+            <div class="o-17">
+                <p class="o-17-1">"Their pastries are top-notch.</p>
+                <p class="o-17-2">What's your go-to coffee order?</p>
+                <p class="o-17-3">It's hard to beat a well-made latte.</p>
+                <p class="o-17-4">I'm all about cappuccinos.</p>
+                <p class="o-17-5">Maybe one day, we'll swap and explore each other's favorites.</p>
+                <p class="o-17-6">Good coffee and good company.</p>
+            </div>
+            <div class="o-18">
+                <p class="o-18-1">It's the best way to clear your mind. </p>
+                <p class="o-18-2"> How far do you usually go?</p>
+                <p class="o-18-3">I aim for about 5 miles, but some days, it's more about enjoying the journey than tracking the distance.</p>
+                <p class="o-18-4">What about you?</p>
+                <p class="o-18-5">I'm more of a 3-mile runner.</p>
+                <p class="o-18-6">It's a nice balance between a workout and a leisurely jog.</p>
+                <p class="o-18-7">Running is about personal goals and enjoying the moment. </p>
+                <p class="o-18-8">I'd like that.</p>
+            </div>
+            <div class="o-19">
+                <p class="o-19-1">That's adorable.</p>
+                <p class="o-19-2">My pup is the same way.</p>
+                <p class="o-19-3">What's your dog's name?</p>
+                <p class="o-19-4">His name is Max. </p>
+                <p class="o-19-5">He's the king of fetch.</p>
+                <p class="o-19-6">How about yours?</p>
+                <p class="o-19-7">I have a Beagle named Daisy. </p>
+            </div>
+        </div>
+        <div class="black">
+            <div class="bk-1">
+                <p class="bk-1-1">I heard that Lisa's ex is dating a model now.</p>
+                <p class="bk-1-2">Can you believe it?</p>
+                <p class="bk-1-3">Well, Lisa did say she wanted her ex to 'find someone out of her league.'</p>
+                <p class="bk-1-4"> I guess he took it literally.</p>
+                <p class="bk-1-5">Yep, he went straight for the runway model!</p>
+            </div>
+            <div class="bk-2">
+                <p class="bk-2-1">Yeah, the Freedom Trail was cool, and the Old North Church was like something out of a storybook.</p>
+                <p class="bk-2-2">I loved the USS Constitution Museum. </p>
+                <p class="bk-2-3">And that seafood at Quincy Market!</p>
+                <p class="bk-2-4"> The clam chowder was to die for, and the lobster rolls were heaven in a bun.</p>
+                <p class="bk-2-5">Oh, and the swan boats in the Public Garden were like a dream. </p>
+            </div>
+            <div class="bk-3">
+                <p class="bk-3-1">Any suggestions?</p>
+                <p class="bk-3-2">I say we grab the car, hit the road, and let fate be our guide.</p>
+                <p class="bk-3-3">I love it!</p>
+                <p class="bk-3-4">No plans at all.</p>
+            </div>
+            <div class="bk-4">
+                <p class="bk-4-1">"I just discovered this new TV series, and I can't stop watching.</p>
+                <p class="bk-4-2">Oh, really?</p>
+                <p class="bk-4-3">What's it about?</p>
+                <p class="bk-4-4">It's about a time-traveling detective.</p>
+                <p class="bk-4-5"> Super addictive.</p>
+                <p class="bk-4-6">Intresting.</p>
+                <p class="bk-4-7">What's it called?</p>
+                <p class="bk-4-8">It's called 'Signal.'</p>
+            </div>
+            <div class="bk-5">
+                <p class="bk-5-1">Ugh, the traffic this morning was a nightmare. </p>
+                <p class="bk-5-2">It was like the entire city decided to go on a road trip at the same time.</p>
+                <p class="bk-5-3">Tell me about it.</p>
+                <p class="bk-5-4">I felt like I aged ten years during my morning commute.</p>
+                <p class="bk-5-5">Coffee, stat!</p>
+                <p class="bk-5-6">Agreed.</p>
+                <p class="bk-5-7">It was bumper to bumper for miles.</p>
+                <p class="bk-5-8">Coffee can fix anything.</p>
+                <p class="bk-5-9">You're right.</p>
+                <p class="bk-5-10">Coffee is the hero we all need in our morning tragedies.</p>
+            </div>
+            <div class="bk-6">
+                <p class="bk-6-1">It's a date.</p>
+                <p class="bk-6-2">No, it's not.</p>
+                <p class="bk-6-3">But it is.</p>
+            </div>
+            <div class="bk-7">
+                <p class="bk-7-1">We need some extra motivation.</p>
+                <p class="bk-7-2">You're absolutely right.</p>
+                <p class="bk-7-3">It's time to kick our workout routine into high gear.</p>
+                <p class="bk-7-4">We could start a friendly competition.</p>
+                <p class="bk-7-5">Whoever logs the most workout hours in a month wins a reward.</p>
+                <p class="bk-7-6">What's the reward?</p>
+                <p class="bk-7-7">How about a cheat day at our favorite bakery?</p>
+            </div>
+            <div class="bk-8">
+                <p class="bk-8-1">I'm on board</p>
+                <p class="bk-8-2">Let's make a trip to the hardware store this weekend.</p>
+            </div>
+            <div class="bk-9">
+                <p class="bk-9-1">Not really.</p>
+                <p class="bk-9-2">But I'm up for anything exciting.</p>
+                <p class="bk-9-3">What do you have in mind?</p>
+                <p class="bk-9-4">I heard there's a new arcade that opened downtown.</p>
+                <p class="bk-9-5">How about we gather the gang and have a gaming showdown?</p>
+                <p class="bk-9-6">That sounds epic.</p>
+            </div>
+            <div class="bk-10">
+                <p class="bk-10-1">Ugh, I've got so much homework to do this weekend.</p>
+                <p class="bk-10-2">It's like a never-ending pile.</p>
+                <p class="bk-10-3">Tell me about it.</p>
+                <p class="bk-10-4">I wish we could just fast-forward to the weekend without homework.</p>
+                <p class="bk-10-5">Who's with me?</p>
+                <p class="bk-10-6">Count me in.</p>
+            </div>
+            <div class="bk-11">
+                <p class="bk-11-1">No way!</p>
+                <p class="bk-11-2">This is the concert of the year.</p>
+                <p class="bk-11-3">We've got to snag those tickets ASAP.</p>
+                <p class="bk-11-4">Let's make a plan.</p>
+                <p class="bk-11-5">We need to be on the website the minute they go live.</p>
+                <p class="bk-11-6">You're all so right!</p>
+                <p class="bk-11-7">Fingers crossed we get those tickets.</p>
+            </div>
+            <div class="bk-12">
+                <p class="bk-12-1">This assignment is killing me.</p>
+                <p class="bk-12-2">I'm drowning in readings too. </p>
+            </div>
+            <div class="bk-13">
+                <p class="bk-13-1">Let's add some posters, fairy lights, and maybe a cozy rug.</p>
+                <p class="bk-13-2">And don't forget some potted plants for a touch of greenery. </p>
+                <p class="bk-13-3">It'll make our room feel like home.</p>
+            </div>
+            <div class="bk-14">
+                <p class="bk-14-1">The intramural soccer league is starting soon. </p>
+                <p class="bk-14-2"> Are you joining the team.</p>
+                <p class="bk-14-3">I've been waiting for this.</p>
+                <p class="bk-14-4"> Are you in?</p>
+                <p class="bk-14-5">I wouldn't miss it.</p>
+                <p class="bk-14-6"> Soccer is a blast.</p>
+            </div>
+            <div class="bk-15">
+                <p class="bk-15-1">I could use some extra cash and work experience.</p>
+                <p class="bk-15-2">That's a smart move.</p>
+                <p class="bk-15-3"> What kind of job are you looking for?</p>
+                <p class="bk-15-4">I'm thinking of something in the library. </p>
+                <p class="bk-15-5">It's quiet.</p>
+            </div>
+            <div class="bk-16">
+                <p class="bk-16-1">I'm still figuring it out.</p>
+                <p class="bk-16-2">That's a big decision.</p>
+                <p class="bk-16-3"> I'm excited and a bit nervous about what's next.</p>
+            </div>
+            <div class="bk-17">
+                <p class="bk-17-1">I'm torn between Europe and Asia.</p>
+                <p class="bk-17-2">I've always wanted to immerse myself in Latin American culture.</p>
+                <p class="bk-17-3">Let's make it happen.</p>
+            </div>
+            <div class="bk-18">
+                <p class="bk-18-1">Are you in for a yoga class?</p>
+                <p class="bk-18-2">Definitely.</p>
+                <p class="bk-18-3">A little self-care is always a good idea. </p>
+                <p class="bk-18-4">Let's make it a wellness day.</p>
+                <p class="bk-18-5">I'm looking forward to it.</p>
+            </div>
+            <div class="bk-19">
+                <p class="bk-19-1">I can't focus on my assignments at home.</p>
+                <p class="bk-19-2">I'm with you.</p>
+                <p class="bk-19-3">The coffee shop ambiance always boosts my productivity.</p>
+            </div>
+        </div>
+        <div class="blue">
+            <div class="b-1">
+                <p class="b-1-1">I can't decide between the chicken salad or the vegetarian sandwich.</p>
+                <p class="b-1-2">I had the vegetarian sandwich yesterday, so I'd go for the chicken salad.</p>
+                <p class="b-1-3">It's delish!</p>
+                <p class="b-1-4">Chicken salad it is, then.</p>
+                <p class="b-1-5">By the way, did you hear that they're ordering pizza for Friday's team lunch?</p>
+                <p class="b-1-6">No way!</p>
+                <p class="b-1-7"> I love pizza Fridays.</p>
+                <p class="b-1-8">I'm already planning to get an extra slice of the margherita. </p>
+            </div>
+            <p class="b-2"> Have you tried that new sushi place downtown?</p>
+            <div class="b-3">
+                <p class="b-3-1"> I'm thinking about redecorating the living room.</p>
+                <p class="b-3-2">I've got so many Pinterest boards dedicated to home decor.</p>
+            </div>
+            <div class="b-4">
+                <p class="b-4-1">One minute it's sunny, the next it's pouring rain.</p>
+                <p class="b-4-2">I know.</p>
+                <p class="b-4-3">I've started carrying both sunglasses and an umbrella with me, just in case.</p>
+                <p class="b-4-4">Haha, you're always prepared.</p>
+            </div>
+            <div class="b-5">
+                <p class="b-5-1">I'm about halfway through.</p>
+                <p class="b-5-2">I finished it last night. </p>
+            </div>
+            <div class="b-6">
+                <p class="b-6-1">I hope they can sort it out.</p>
+                <p class="b-6-2">It's the price of fame, I guess.</p>
+                <p class="b-6-3">But you know how the internet loves a good celebrity scandal.</p>
+                <p class="b-6-4">The memes are already flooding in.</p>
+            </div>
+            <div class="b-7">
+                <p class="b-7-1">They've been dating for a while, right?</p>
+                <p class="b-7-2">Well, it seems they had a huge argument last night, and Mark posted a cryptic message on social media about trust and betrayal.</p>
+                <p class="b-7-3">Yikes, that sounds intense. </p>
+                <p class="b-7-4">Do we know what the argument was about?</p>
+                <p class="b-7-5">Not the details, but people are speculating left and right.</p>
+            </div>
+            <div class="b-8">
+                <p class="b-8-1">Xbox or PlayStation, what's it going to be?</p>
+                <p class="b-8-2">That's the ultimate dilemma.</p>
+                <p class="b-8-3">I'm leaning towards PlayStation for its exclusive games, but Xbox has Game Pass.</p>
+                <p class="b-8-4">I can't decide.</p>
+                <p class="b-8-5">I want both!</p>
+            </div>
+            <div class="b-9">
+                <p class="b-9-1">I've landed one in a marketing agency.</p>
+                <p class="b-9-2">It took a lot of effort, but I'm excited to get hands-on experience.</p>
+                <p class="b-9-3">I'm still waiting to hear back from a few places, but I'm hopeful.</p>
+                <p class="b-9-4">I'll be hitting the career center hard this week.</p>
+                <p class="b-9-5">You've got this</p>
+            </div>
+            <div class="b-10">
+                <p class="b-10-1">There's something oddly productive about the quiet of late-night studying.</p>
+                <p class="b-10-2">All-nighters! </p>
+            </div>
+            <div class="b-11">
+                <p class="b-11-1">I've always wanted to backpack through Europe.</p>
+                <p class="b-11-2">I'm thinking of a cross-country road trip in the U.S. National parks, quirky roadside attractions, and adventures on the open road.</p>
+                <p class="b-11-3">Both ideas sound epic!</p>
+                <p class="b-11-4">Count me in.</p>
+            </div>
+            <div class="b-12">
+                <p class="b-12-1">Don't stress.</p>
+                <p class="b-12-2">It's a big decision.</p>
+                <p class="b-12-3">It's okay to take your time.</p>
+            </div>
+            <div class="b-13">
+                <p class="b-13-1">That sounds intriguing.</p>
+                <p class="b-13-2">I'm always up for surprises.</p>
+                <p class="b-13-3"> Let's keep an eye out for updates.</p>
+                <p class="b-13-4">We'll be there to find out.</p>
+            </div>
+            <div class="b-14">
+                <p class="b-14-1">I've been sending out internship applications like crazy. </p>
+                <p class="b-14-2">The competition can be tough.</p>
+                <p class="b-14-3">It's a dream opportunity. </p>
+                <p class="b-14-4">Best of luck.</p>
+                <p class="b-14-5">You too.</p>
+            </div>
+            <div class="b-15">
+                <p class="b-15-1">Our club meeting is coming up.</p>
+                <p class="b-15-2">Good call.</p>
+                <p class="b-15-3">Teamwork is key.</p>
+            </div>
+            <div class="b-16">
+                <p class="b-16-1">I'll be there too</p>
+                <p class="b-16-2">I'd love to.</p>
+                <p class="b-16-3"> Interested?</p>
+                <p class="b-16-4">What subjects are you focusing on?</p>
+            </div>
+            <div class="b-17">
+                <p class="b-17-1">I got the offer!</p>
+                <p class="b-17-2">I'm excited to start.</p>
+                <p class="b-17-3">That's fantastic news.</p>
+                <p class="b-17-4">You're going to do great.</p>
+            </div>
+            <div class="b-18">
+                <p class="b-18-1">I'll be a part of their app development team.</p>
+                <p class="b-18-2">You're going to learn a lot.</p>
+                <p class="b-18-3">What do you think.</p>
+                <p class="b-18-4">It's going to be a team effort.</p>
+                <p class="b-18-5">It's quite competitive.</p>
+            </div>
+            <div class="b-19">
+                <p class="b-19-1">I'm proud of you.</p>
+                <p class="b-19-2">Your hard work is paying off.</p>
+                <p class="b-19-3">I'm exploring opportunities in tech and digital marketing. </p>
+                <p class="b-19-4">I'll keep an eye out for job postings and let you know about any relevant connections.</p>
+            </div>
+
+        </div>
+        <div class="yellow">
+            <p class="y-1">...</p>
+            <p class="y-2">...</p>
+            <p class="y-3">...</p>
+            <p class="y-4">...</p>
+            <p class="y-5">...</p>
+            <p class="y-6">...</p>
+            <p class="y-7">...</p>
+            <p class="y-8">...</p>
+            <p class="y-9">...</p>
+            <p class="y-10">...</p>
+            <p class="y-11">...</p>
+            <p class="y-12">...</p>
+            <p class="y-13">...</p>
+            <p class="y-14">...</p>
+            <p class="y-15">...</p>
+            <p class="y-16">...</p>
+            <p class="y-17">...</p>
+            <p class="y-18">...</p>
+            <p class="y-19">...</p>
+            <p class="y-20">...</p>
+            <p class="y-21">...</p>
+            <p class="y-22">...</p>
+            <p class="y-23">...</p>
+            <p class="y-24">...</p>
+            <p class="y-25">...</p>
+            <p class="y-26">...</p>
+            <p class="y-27">...</p>
+            <p class="y-28">...</p>
+            <p class="y-29">...</p>
+            <p class="y-30">...</p>
+
+        </div>
+        <div class="button"></div>
+            <div class="all">ALL</div>
+            <div class="obutton"></div>
+            <div class="bkbutton"></div>
+            <div class="pbutton"></div>
+            <div class="bbutton"></div>
+            <div class="ybutton"></div>
+            <div class="conversation"></div>
+        </div>
+        <div class="audbutton">
+            <button onclick="audone.play()" class="audio-1">🎧</button>
+        </div>
+
+    </div>
+</body>
+<script src="jquery-3.7.1.min .js"></script>
+<script src="script.js"></script> 
+<script src="p5.js"></script>
+<script src="p5.sound.js"></script>
+<script src="p5.speech.js"></script>
+</html>
